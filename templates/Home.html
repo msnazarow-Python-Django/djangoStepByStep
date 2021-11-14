@@ -1,0 +1,14 @@
+{% extends 'Base.html' %}
+{% block content %}
+<h1>This is our home page</h1>
+    <h2>My name is {{ name }}</h2>
+{#    <div class="container-sm">#}
+    {% for article in articles %}
+        <h3>{{ article.title }}</h3>
+        <h4>{{ article.shorten_text }}</h4>
+        <h5>{{ article.date }}</h5>
+    {% endfor %}
+{#    </div>#}
+
+    <button type="button" class="btn btn-warning">Warning</button>
+{%  endblock %}

@@ -1,0 +1,19 @@
+{% extends 'Base.html' %}
+{% load util %}
+{% block content %}
+{% for elem in list %}
+    <ul>
+        <li>
+            <ul>
+                {% with items=elem|get_vars %}
+                    {% for key, value in items.items  %}
+                        {% if key|first != '_' and key != 'id' %}
+                            <li> {{ value }} </li>
+                        {% endif %}
+                    {% endfor %}
+                {% endwith %}
+            </ul>
+        </li>
+    </ul>
+{% endfor %}
+{% endblock %}

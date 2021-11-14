@@ -1,0 +1,14 @@
+{% extends 'Base.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+<div class="container">
+<h1>Modal Form Registration</h1>
+    <form action="{% url 'addModalForm' %}" method="post">
+{{ modelform.as_p }}
+  {% csrf_token %}
+        <input type="submit" class="btn btn-success" value="Register">
+    </form>
+</div>
+{% endblock %}

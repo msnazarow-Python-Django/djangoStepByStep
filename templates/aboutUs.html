@@ -1,0 +1,12 @@
+{% extends 'Base.html' %}
+{% block content %}
+    {% for elem in list %}
+        <li>{{ elem }}</li>
+    {% endfor %}
+
+    {% if mynum == 50 %}
+        <h1>Condition is true</h1>
+        {% else %}
+        <h1>Condition is false</h1>
+    {% endif %}
+{% endblock %}
